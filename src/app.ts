@@ -23,7 +23,7 @@ class App {
     this.setUpRoutes();
     this.connectToTheDB();
   }
-
+  // hello db
   private configMiddleware(): void {
     this.app.use(express.json());
     this.app.use(morgan('dev'));
