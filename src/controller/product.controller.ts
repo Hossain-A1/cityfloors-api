@@ -25,7 +25,7 @@ export default class DronesController {
       const { did } = req.params;
 
       if (!mongoose.Types.ObjectId.isValid(did)) {
-        res.status(404).json({ message: 'Drone not found' });
+        res.status(404).json({ message: 'Item not found' });
       }
 
       await Promise.resolve().then(async () => {
@@ -106,7 +106,7 @@ export default class DronesController {
       const { did } = req.params;
 
       if (!mongoose.Types.ObjectId.isValid(did)) {
-        res.status(404).json({ message: 'Drone not found' });
+        res.status(404).json({ message: 'Item not found' });
       }
 
       await Promise.resolve().then(async () => {
@@ -139,7 +139,7 @@ export default class DronesController {
       const { did } = req.params;
 
       if (!mongoose.Types.ObjectId.isValid(did)) {
-        res.status(404).json({ message: 'Drone not found' });
+        res.status(404).json({ message: 'Item not found' });
       }
 
       await Promise.resolve().then(async () => {

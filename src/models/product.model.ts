@@ -45,6 +45,6 @@ const droneSchema = new Schema<droneType>(
   }
 );
 
-const DroneModel = model<droneType>('Drone', droneSchema);
+const DroneModel = model<droneType>('Product', droneSchema);
 
 export default DroneModel;

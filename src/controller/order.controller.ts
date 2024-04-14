@@ -13,7 +13,7 @@ export default class OrderController {
       const { did } = req.params;
 
       if (!mongoose.Types.ObjectId.isValid(did)) {
-        res.status(404).json({ message: 'Drone not found' });
+        res.status(404).json({ message: 'Product not found' });
       }
 
       const user = await UserModel.findById(req.user?._id).populate('orders');
