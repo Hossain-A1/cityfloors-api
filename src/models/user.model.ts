@@ -52,9 +52,7 @@ userSchema.statics.register = async function (
   phoneNo
 ): Promise<userType> {
   if (!name || !email || !password) {
-    throw new Error(
-      'Must fill name,email and password!'
-    );
+    throw new Error('Must fill name,email and password!');
   }
 
   const existingUser = await this.findOne({ email });

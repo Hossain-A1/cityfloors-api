@@ -11,7 +11,7 @@ const droneSchema = new Schema<droneType>(
       type: String,
       required: true,
     },
-    
+
     category: {
       type: String,
       required: true,
