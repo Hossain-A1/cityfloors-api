@@ -38,7 +38,7 @@ class App {
     this.app.get('/', (req: Request, res: Response) => {
       return res
         .status(200)
-        .json({ message: 'Welcome to skyHowkForge-server😊' });
+        .json({ message: 'Welcome to the cityfloors-server😊' });
     });
     // bypass Routes
     this.app.use('/api/auth', authRoutes);

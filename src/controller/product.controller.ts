@@ -6,7 +6,7 @@ import DroneModel from '../models/product.model';
 export default class DronesController {
   constructor() {}
 
-  // Get all drones
+  // Get all product
   public async getAllProducts(req: Request, res: Response): Promise<void> {
     try {
       await Promise.resolve().then(async () => {
@@ -19,7 +19,7 @@ export default class DronesController {
     }
   }
 
-  // Get a drone
+  // Get a product
   public async getProduct(req: Request, res: Response): Promise<void> {
     try {
       const { did } = req.params;
@@ -38,34 +38,31 @@ export default class DronesController {
     }
   }
 
-  // Create a drone
+  // Create a product
   public async createProduct(req: Request, res: Response): Promise<void> {
     try {
       const {
         title,
         description,
-        about,
+
         category,
         images,
         price,
         rating,
         stock,
-        count,
       } = req.body;
 
       if (
         !title ||
         !description ||
-        !about ||
         !category ||
         !images ||
         !price ||
         !rating ||
-        !stock ||
-        !count
+        !stock
       ) {
         throw new Error(
-          'Please provide all the following fields: Title, Description, Category, Images, Price, rating ,stock ,count'
+          'Please provide all the following fields: Title, Description, Category, Images, Price, rating ,stock'
         );
       }
 
@@ -73,13 +70,12 @@ export default class DronesController {
         const drone = await DroneModel.create({
           title,
           description,
-          about,
+
           category,
           images,
           price,
           rating,
           stock,
-          count,
         });
 
         res.status(200).json(drone);
@@ -89,19 +85,18 @@ export default class DronesController {
     }
   }
 
-  // Update a drone
+  // Update a product
   public async updateProduct(req: Request, res: Response): Promise<void> {
     try {
       const {
         title,
         description,
         category,
-        about,
+
         images,
         price,
         rating,
         stock,
-        count,
       } = req.body;
       const { did } = req.params;
 
@@ -115,13 +110,12 @@ export default class DronesController {
           {
             title,
             description,
-            about,
+
             category,
             images,
             price,
             rating,
             stock,
-            count,
           },
           { new: true }
         );

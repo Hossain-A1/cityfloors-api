@@ -53,7 +53,7 @@ userSchema.statics.register = async function (
 ): Promise<userType> {
   if (!name || !email || !password) {
     throw new Error(
-      'Must fill name,email,password,picUrl,address and phoneNo '
+      'Must fill name,email and password!'
     );
   }
 

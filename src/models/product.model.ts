@@ -11,10 +11,7 @@ const droneSchema = new Schema<droneType>(
       type: String,
       required: true,
     },
-    about: {
-      type: String,
-      required: true,
-    },
+    
     category: {
       type: String,
       required: true,
